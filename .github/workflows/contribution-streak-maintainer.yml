@@ -1,0 +1,19 @@
+name: contribution-streak-maintainer
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs every day at 10:00 PM UTC
+    - cron: "0 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  contribution-streak-maintainer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make a contribution
+        run: npx contribution-streak-maintainer ${{github.repository}} --email=tamminanikhil01@gmail.com
+        env:
+          DEVFUL_GITHUB_TOKEN: ${{ secrets.CSM_GITHUB_TOKEN }}
