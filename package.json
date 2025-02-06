@@ -74,7 +74,7 @@
     "dotenv": "^16.3.1",
     "fs-extra": "^11.1.1",
     "minimist": "^1.2.8",
-    "octokit": "^3.1.1"
+    "octokit": "^4.1.0"
   },
   "devDependencies": {
     "@octokit/graphql-schema": "^14.41.0",
